@@ -76,7 +76,10 @@ $('.js-addPerson').on('click', function() {
     var key = numberOfPeople;
     numberOfPeople++;
     var markup = '<div class="form-group">' +
-            '<input type="text" class="form-control" id="person[' + key + ']" name="person[' + key + ']" placeholder="Thing #' + numberOfPeople + '">' +
-        '</div>';
+        '<div class="input-group">' +
+            '<input type="text" class="form-control" name="person[]" placeholder="Another name here">' +
+            '<div class="input-group-addon"><i class="glyphicon glyphicon-trash"></i></div>' +
+        '</div>'
+    '</div>';
     $('#rsvp-names-list').append(markup);
 });
