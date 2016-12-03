@@ -1,0 +1,24 @@
+{
+  "name": "wedding",
+  "version": "1.0.0",
+  "description": "A website for Claire and Toner's wedding.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardtoner/wedding.git"
+  },
+  "author": "Claire Organ and Richard Toner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richardtoner/wedding/issues"
+  },
+  "homepage": "https://github.com/richardtoner/wedding#readme",
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1"
+  }
+}
