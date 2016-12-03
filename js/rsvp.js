@@ -37,22 +37,9 @@ var formRoutes = {
 var currentStepId = '#rsvp-names';
 var numberOfPeople = 1;
 
-$('.js-next').on('click', function() {
-    if (currentStepId === '#rsvp-attending') {
-        var attending = $(currentStepId + ' input[name=attending]:checked').val();
-        var newStepId = formRoutes['#rsvp-attending']['next'][attending];
-    } else {
-        var newStepId = formRoutes[currentStepId]['next'];
-    }
-    // TODO: Validate names
-    // TODO: Update fields for #rsvp-dietaryRequirements and #rsvp-songs
-    gotoStep(newStepId);
-});
-
-$('.js-previous').on('click', function() {
-    var newStepId = formRoutes[currentStepId]['previous'];
-    gotoStep(newStepId);
-});
+////////////////////////////////////////////////////////////////////////////////
+// Helper functions
+////////////////////////////////////////////////////////////////////////////////
 
 function gotoStep(newStepId) {
     $(currentStepId).addClass('hidden');
@@ -72,14 +59,45 @@ function gotoStep(newStepId) {
     $(currentStepId).removeClass('hidden');
 }
 
+////////////////////////////////////////////////////////////////////////////////
+// Event hookups
+////////////////////////////////////////////////////////////////////////////////
+
+// Hook up the next button to go to the next step in the form
+$('.js-next').on('click', function() {
+    if (currentStepId === '#rsvp-attending') {
+        var attending = $(currentStepId + ' input[name=attending]:checked').val();
+        var newStepId = formRoutes['#rsvp-attending']['next'][attending];
+    } else {
+        var newStepId = formRoutes[currentStepId]['next'];
+    }
+    // TODO: Validate names
+    // TODO: Update fields for #rsvp-dietaryRequirements and #rsvp-songs
+    gotoStep(newStepId);
+});
+
+// Hook up the previous button to go to the previous step in the form
+$('.js-previous').on('click', function() {
+    var newStepId = formRoutes[currentStepId]['previous'];
+    gotoStep(newStepId);
+});
+
+// Hook up the add person button
 $('.js-addPerson').on('click', function() {
-    var key = numberOfPeople;
     numberOfPeople++;
     var markup = '<div class="form-group">' +
         '<div class="input-group">' +
             '<input type="text" class="form-control" name="person[]" placeholder="Another name here">' +
-            '<div class="input-group-addon"><i class="glyphicon glyphicon-trash"></i></div>' +
-        '</div>'
+            '<div class="input-group-addon js-removePerson" tabindex="0">' +
+                '<i class="glyphicon glyphicon-trash"></i>' +
+            '</div>' +
+        '</div>' +
     '</div>';
     $('#rsvp-names-list').append(markup);
+});
+
+// Hook up the delete button on the name form elements
+$('#rsvp-names').on('click', '.js-removePerson', function() {
+    numberOfPeople--;
+    $(this).closest('.form-group').remove();
 });
