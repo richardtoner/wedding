@@ -59,6 +59,27 @@ function gotoStep(newStepId) {
     $(currentStepId).removeClass('hidden');
 }
 
+function namesAreValid() {
+    var isValid = true;
+    $('#rsvp-names input').each(function() {
+        if ($(this).val() == "") {
+            isValid = false;
+        }
+    });
+    if (!isValid) {
+        displayErrorMessage("Please fill in all name fields (delete any if you added too many!)");
+    }
+    return isValid;
+}
+
+function displayErrorMessage(message) {
+    $('.js-rsvp-error-message').text(message);
+    $('.js-rsvp-error').addClass('in');
+    setTimeout(function() {
+        $('.js-rsvp-error').removeClass('in');
+    }, 3000);
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 // Event hookups
 ////////////////////////////////////////////////////////////////////////////////
@@ -71,7 +92,12 @@ $('.js-next').on('click', function() {
     } else {
         var newStepId = formRoutes[currentStepId]['next'];
     }
-    // TODO: Validate names
+    // Validate the names
+    if (currentStepId === '#rsvp-names') {
+        if (!namesAreValid()) {
+            return;
+        }
+    }
     // TODO: Update fields for #rsvp-dietaryRequirements and #rsvp-songs
     gotoStep(newStepId);
 });
