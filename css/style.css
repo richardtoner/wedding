@@ -1,18 +1,17 @@
 @font-face {
     font-family: 'CoreCircus';
-    src: url('fonts/CoreCircus.eot'); /* IE9 Compat Modes */
-    src: url('fonts/CoreCircus.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('fonts/CoreCircus.woff') format('woff'), /* Modern Browsers */
-        url('fonts/CoreCircus.ttf') format('truetype'); /* Safari, Android, iOS */
+    src: url('../fonts/CoreCircus.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/CoreCircus.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/CoreCircus.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/CoreCircus.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
 @font-face {
     font-family: 'Mustache';
-    src: url('fonts/mustache-webfont.eot'); /* IE9 Compat Modes */
-    src: url('fonts/mustache-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('fonts/mustache-webfont.woff') format('woff'), /* Modern Browsers */
-        url('fonts/mustache-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
-        url('mywebfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+    src: url('../fonts/mustache-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/mustache-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/mustache-webfont.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/mustache-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
 /* Global Settings */
