@@ -5,7 +5,10 @@ var browserSync = require('browser-sync').create();
 gulp.task('serve', function () {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./",
+            serveStaticOptions: {
+                extensions: ['html'] // pretty urls
+            }
         },
         browser: "google chrome"
     });
