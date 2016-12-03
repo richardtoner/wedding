@@ -103,7 +103,7 @@ a, a:hover, a:visited {
 }
 
 #wheretostay {
-    background-image: url(images/coastbw3.jpg);
+    background-image: url(../images/coastbw3.jpg);
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
