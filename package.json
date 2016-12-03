@@ -16,5 +16,9 @@
     "url": "https://github.com/richardtoner/wedding/issues"
   },
   "homepage": "https://github.com/richardtoner/wedding#readme",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1"
+  }
 }
