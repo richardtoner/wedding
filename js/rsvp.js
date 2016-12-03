@@ -88,8 +88,8 @@ $('.js-addPerson').on('click', function() {
     var markup = '<div class="form-group">' +
         '<div class="input-group">' +
             '<input type="text" class="form-control" name="person[]" placeholder="Another name here">' +
-            '<div class="input-group-addon js-removePerson" tabindex="0">' +
-                '<i class="glyphicon glyphicon-trash"></i>' +
+            '<div class="input-group-addon js-removePerson">' +
+                '<button type="button" class="btn btn-xs btn-no-style"><i class="glyphicon glyphicon-trash"></i></button>' +
             '</div>' +
         '</div>' +
     '</div>';
