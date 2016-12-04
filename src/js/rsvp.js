@@ -39,7 +39,9 @@ var formRoutes = {
 
 // TODO: Switch off Enter key as submit
 var currentStepId = '#rsvp-names';
-var numberOfPeople = 1;
+
+// Change formspree _next target
+$('input[name=_next]').val(window.location.href.replace('/rsvp', ''));
 
 ////////////////////////////////////////////////////////////////////////////////
 // Helper functions
@@ -144,7 +146,6 @@ $('.js-previous').on('click', function() {
 
 // Hook up the add person button
 $('.js-addPerson').on('click', function() {
-    numberOfPeople++;
     var markup = '<div class="form-group">' +
         '<div class="input-group">' +
             '<input type="text" class="form-control" name="person[]" placeholder="Another name here">' +
@@ -158,6 +159,5 @@ $('.js-addPerson').on('click', function() {
 
 // Hook up the delete button on the name form elements
 $('#rsvp-names').on('click', '.js-removePerson', function() {
-    numberOfPeople--;
     $(this).closest('.form-group').remove();
 });
