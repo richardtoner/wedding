@@ -20,6 +20,10 @@ html, body, #content {
     min-width: 300px;
 }
 
+.below-navbar {
+    padding-top: 50px;
+}
+
 body {
     font-family: "CoreCircus";
 }
