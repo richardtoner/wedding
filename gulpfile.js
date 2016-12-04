@@ -15,7 +15,7 @@ gulp.task('serve', function () {
 
     // Reload if any changes to the source code is detected
     // TODO: Make this more clever by restructuring stuff
-    gulp.watch('**/*').on('change', browserSync.reload);
+    //gulp.watch('**/*').on('change', browserSync.reload);
 });
 
 // Serve the website as a default task
