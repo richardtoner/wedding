@@ -11,3 +11,5 @@ Thumbs.db
 # Environment ignores #
 #######################
 node_modules
+dist
+.publish
