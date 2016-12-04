@@ -17,6 +17,7 @@
 /* Global Settings */
 html, body, #content {
     height: 100%;
+    min-width: 300px;
 }
 
 body {
@@ -126,4 +127,10 @@ a, a:hover, a:visited {
     background: none;
     border: none;
     padding: 0;
+}
+
+.alert {
+    position: absolute;
+    bottom: 10px;
+    margin: 0 10px;
 }
