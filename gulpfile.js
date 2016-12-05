@@ -22,7 +22,10 @@ gulp.task('serve', function () {
 // Deploy to GitHub pages
 gulp.task('deploy', function() {
     return gulp.src('./dist/**/*')
-        .pipe(ghPages());
+        .pipe(ghPages({
+            'remoteUrl': 'git@github.com:claireo123/claireo123.github.io.git',
+            'branch': 'master'
+        }));
 });
 
 // Serve the website as a default task
