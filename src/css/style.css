@@ -127,6 +127,10 @@ a, a:hover, a:visited {
     color: #ffffff;
 }
 
+.green-background {
+    background-color: #c7e2e2;
+}
+
 .btn-no-style {
     background: none;
     border: none;
