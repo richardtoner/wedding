@@ -22,18 +22,10 @@ var formRoutes = {
         'next': '#rsvp-messages'
     },
     '#rsvp-messages': {
-        'previous': '#rsvp-songs',
-        'next': '#rsvp-complete'
+        'previous': '#rsvp-songs'
     },
     '#rsvp-excuses': {
-        'previous': '#rsvp-attending',
-        'next': '#rsvp-yourLoss'
-    },
-    '#rsvp-yourLoss': {
-        'previous': '#rsvp-excuses'
-    },
-    '#rsvp-complete': {
-        'previous': '#rsvp-messages',
+        'previous': '#rsvp-attending'
     }
 };
 
