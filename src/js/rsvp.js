@@ -161,3 +161,12 @@ $('.js-addPerson').on('click', function() {
 $('#rsvp-names').on('click', '.js-removePerson', function() {
     $(this).closest('.form-group').remove();
 });
+
+// Prevent submissions by using the enter key
+$('body').on('keydown', 'input', function(event) {
+   var x = event.which;
+   if (x === 13) {
+       event.preventDefault();
+       console.log("https://www.youtube.com/watch?v=cQ_b4_lw0Gg");
+   }
+});
