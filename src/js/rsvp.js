@@ -33,7 +33,7 @@ var formRoutes = {
 var currentStepId = '#rsvp-names';
 
 // Change formspree _next target
-$('input[name=_next]').val(window.location.href.replace('/rsvp', ''));
+$('input[name=_next]').val(window.location.href.replace('/rsvp', '/thanks'));
 
 ////////////////////////////////////////////////////////////////////////////////
 // Helper functions
