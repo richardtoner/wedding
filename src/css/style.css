@@ -72,7 +72,7 @@ a, a:hover, a:visited {
     color: #4276a5;
 }
 
-.bluetext a, a:hover, a:visited {
+.bluetext a, .bluetext a:hover, .bluetext a:visited {
     color: #4276a5;
 }
 
