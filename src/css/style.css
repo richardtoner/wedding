@@ -150,3 +150,7 @@ a, a:hover, a:visited {
 .word-wrap {
     word-wrap: break-word;
 }
+
+.underlined {
+    text-decoration: underline;
+}
