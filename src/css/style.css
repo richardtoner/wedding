@@ -53,11 +53,13 @@ a, a:hover, a:visited {
     color: #ffffff;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:visited {
     color: #ffffff;
 }
 
-.navbar-default .navbar-nav>li>a:hover {
+ {
     color: #ffffff;
 }
 
