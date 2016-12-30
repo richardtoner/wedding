@@ -84,11 +84,18 @@ function getSong() {
 }
 
 function displayErrorMessage(message) {
-    $('.js-rsvp-error-message').text(message);
-    $('.js-rsvp-error').addClass('in');
+    var messageId = Date.now();
+    var markup = '<div class="alert alert-danger fade" id="' +  messageId + '" role="alert">' +
+        '<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> ' + message +
+    '</div>';
+    $('.js-alerts').append(markup);
+    $('.js-alerts').find('#' + messageId).addClass('in');
     setTimeout(function() {
-        $('.js-rsvp-error').removeClass('in');
+        $('.js-alerts').find('#' + messageId).removeClass('in');
     }, 3000);
+    setTimeout(function() {
+        $('.js-alerts').find('#' + messageId).remove();
+    }, 3500);
 }
 
 function refreshPersonalFormSteps() {
