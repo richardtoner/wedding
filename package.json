@@ -18,8 +18,8 @@
   "homepage": "https://github.com/richardtoner/wedding#readme",
   "private": true,
   "devDependencies": {
-    "browser-sync": "^2.18.2",
-    "gulp": "^3.9.1",
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
     "gulp-gh-pages": "^0.5.4"
   }
 }

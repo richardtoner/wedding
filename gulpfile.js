@@ -3,7 +3,7 @@ var browserSync = require('browser-sync').create();
 var ghPages = require('gulp-gh-pages');
 
 // Start the Browsersync server and serve the website from it
-gulp.task('serve', function () {
+gulp.task('serve', () => {
     browserSync.init({
         server: {
             baseDir: "./src",
@@ -13,14 +13,10 @@ gulp.task('serve', function () {
         },
         browser: "google chrome"
     });
-
-    // Reload if any changes to the source code is detected
-    // TODO: Make this more clever by restructuring stuff
-    //gulp.watch('**/*').on('change', browserSync.reload);
 });
 
 // Deploy to GitHub pages
-gulp.task('deploy', function() {
+gulp.task('deploy', () => {
     return gulp.src('./dist/**/*')
         .pipe(ghPages({
             'remoteUrl': 'git@github.com:claireo123/claireo123.github.io.git',
@@ -29,4 +25,4 @@ gulp.task('deploy', function() {
 });
 
 // Serve the website as a default task
-gulp.task('default', ['serve']);
+gulp.task('default', gulp.series('serve'));
